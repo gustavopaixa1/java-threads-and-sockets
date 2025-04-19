@@ -1,5 +1,7 @@
+import static java.lang.Thread.sleep;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ExampleThread thread1 = new ExampleThread("Thread 1");
         ExampleThread thread2 = new ExampleThread("Thread 2");
         MyRun runnableImplementation = new MyRun("Thread 3");
@@ -13,14 +15,19 @@ public class Main {
         System.out.println("Thread1 is alive: " + thread1.isAlive());
 
 //      Definir prioridades das threads, sendo 1 a menor e 10 a maior
-        thread1.setPriority(10);
-        thread2.setPriority(1);
-        thread3.setPriority(1);
+        thread1.setPriority(5);
+        thread2.setPriority(5);
+        thread3.setPriority(5);
 
 //      Thread inicia com o start() e não com o run()
+        thread3.start();
+
+//      O join() faz com que a thread principal aguarde a execução da thread 3
+//       A thread 3 vai finalizar e as demais threads vão continuar executando
+//       thread3.join();
+
         thread1.start();
         thread2.start();
-        thread3.start();
 
 //      Invocar o start() de um thread que já foi iniciado gera uma IllegalThreadStateException
 //      thread.start();
@@ -41,7 +48,8 @@ class ExampleThread extends Thread {
     // Must be overridden to define the thread's behavior
     @Override
     public void run() {
-        for (int i = 0; i < 100; i++) {
+
+        for (int i = 0; i < 50; i++) {
             System.out.println(message + "- " + i);
         }
         System.out.println("Thread " + message + " finished.");
@@ -55,8 +63,17 @@ class MyRun implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 50; i++) {
             System.out.println(message + " -" + i);
+//          Pausa a execução da thread atual e permite que outras threads sejam executadas
+            Thread.yield();
+        }
+        try {
+            // Pausa a execução da thread 1 segundo.
+            // Neste exemplo, a thread irá mostrar a mensagem de término depois das demais threads
+            sleep(0);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
         System.out.println("Thread " + message + " finished.");
 
