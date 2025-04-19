@@ -44,8 +44,7 @@ class ExampleThread extends Thread {
         this.message = message;
     }
 
-    // This method is called when the thread is started
-    // Must be overridden to define the thread's behavior
+    // O métdo run() é o que vai executar quando a thread for iniciada
     @Override
     public void run() {
 
