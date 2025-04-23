@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/1-Threads/1-Threads.iml" filepath="$PROJECT_DIR$/1-Threads/1-Threads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2 - PoolDeThreads/2 - PoolDeThreads.iml" filepath="$PROJECT_DIR$/2 - PoolDeThreads/2 - PoolDeThreads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3 - Sockets/3 - Sockets.iml" filepath="$PROJECT_DIR$/3 - Sockets/3 - Sockets.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4 - Exclusao Mutua/4 - Exclusao Mutua.iml" filepath="$PROJECT_DIR$/4 - Exclusao Mutua/4 - Exclusao Mutua.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LP2.iml" filepath="$PROJECT_DIR$/.idea/LP2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PoolDeThreads/PoolDeThreads.iml" filepath="$PROJECT_DIR$/PoolDeThreads/PoolDeThreads.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Threads/Threads.iml" filepath="$PROJECT_DIR$/Threads/Threads.iml" />
     </modules>
   </component>
 </project>
