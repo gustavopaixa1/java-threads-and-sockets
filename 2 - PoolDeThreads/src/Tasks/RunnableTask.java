@@ -1,4 +1,6 @@
-class RunnableTask implements Runnable {
+package Tasks;
+
+public class RunnableTask implements Runnable {
     private final String name;
 
     public RunnableTask(String name) {
