@@ -7,6 +7,10 @@ package VariavelBooleana;
 //        busy = true;
 //   }
 
+
+/*
+* O código não garante que cada processo va executar em ordem
+* */
 public class Boolean {
     public static void main(String[] args) {
         Lock lock = new LockImpl();
@@ -25,6 +29,8 @@ public class Boolean {
             this.lock = lock;
         }
 
+
+        /*Coloquei que cada thread execute infinitamente e fique parada por 2 segundos*/
         public void run(){
             while(true){
                 lock.requestCS();
@@ -42,7 +48,9 @@ public class Boolean {
     }
 }
 
-
+/*
+* Foi adicionada a interface Lock para definir o contrato da implementação
+* */
 interface Lock {
     public void requestCS();
     public void releaseCS();
@@ -50,7 +58,8 @@ interface Lock {
 
 class LockImpl implements Lock {
     private boolean busy = false;
-
+/*O processo solicita o recurso, aguarda enquanto está ocupado,
+em seguida pega e muda o busy para true*/
     public void requestCS(){
         while (busy)
         busy = true;
