@@ -19,7 +19,7 @@ public class InterfaceScheduledExecutorService {
         // Código feito para parar a execução do ScheduledExecutorService após 10 segundos
         scheduleExecutor.schedule(() -> {
             scheduleExecutor.shutdown();
-        }, 20, TimeUnit.SECONDS);
+        }, 5, TimeUnit.SECONDS);
 
         // Pega o resultado do ScheduledFuture com o métdo get()
         System.out.println(scheduleResult.get());

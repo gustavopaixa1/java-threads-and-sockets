@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/2 - PoolDeThreads/2 - PoolDeThreads.iml" filepath="$PROJECT_DIR$/2 - PoolDeThreads/2 - PoolDeThreads.iml" />
       <module fileurl="file://$PROJECT_DIR$/3 - Sockets/3 - Sockets.iml" filepath="$PROJECT_DIR$/3 - Sockets/3 - Sockets.iml" />
       <module fileurl="file://$PROJECT_DIR$/4 - Exclusao Mutua/4 - Exclusao Mutua.iml" filepath="$PROJECT_DIR$/4 - Exclusao Mutua/4 - Exclusao Mutua.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5 - Sincronizacao/5 - Sincronizacao.iml" filepath="$PROJECT_DIR$/5 - Sincronizacao/5 - Sincronizacao.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LP2.iml" filepath="$PROJECT_DIR$/.idea/LP2.iml" />
     </modules>
   </component>
