@@ -1,4 +1,4 @@
-package AlgoritmoDeDeckker;
+package AlgoritmoDeDekker;
 
 public class AlgoritmoDeDekker {
     public static void main(String[] args) {
