@@ -1,11 +1,11 @@
-package ProtocolClient;
+package TCP.ProtocolClient;
 
 import java.io.*;
 import java.net.Socket;
 
 public class ProtocolClient {
     public static void main(String[] args) throws IOException {
-        Socket s = new Socket("localhost", 4445);
+        Socket s = new Socket("localhost", 4460);
 
         DataInputStream inputStream = new DataInputStream(s.getInputStream());
         DataOutputStream outputStream = new DataOutputStream(s.getOutputStream());

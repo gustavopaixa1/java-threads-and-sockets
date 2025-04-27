@@ -39,9 +39,9 @@ public class AlgoritmoSwap {
 
 // Classe Swap conforme o slide
 class Swap {
-    private boolean value = false;
+    volatile private boolean value = false;
 
-    public boolean swap(boolean newValue) {
+    public synchronized boolean swap(boolean newValue) {
         boolean temp = value;
         value = newValue;
         return temp;

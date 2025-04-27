@@ -1,4 +1,4 @@
-package ProtocolClient;
+package TCP.ProtocolClient;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -18,6 +18,7 @@ public class ProtocolServer {
 
         while (true){
             String fromClient = inputStream.readUTF();
+            System.out.println("Recebido do cliente: " + fromClient);
             outputStream.writeUTF(protocol.processLine(fromClient));
             if (fromClient.equals("Bye")) break;
         }

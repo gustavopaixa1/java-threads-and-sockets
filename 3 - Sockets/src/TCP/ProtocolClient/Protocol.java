@@ -1,4 +1,4 @@
-package ProtocolClient;
+package TCP.ProtocolClient;
 
 public class Protocol {
     public String processLine(String input){
